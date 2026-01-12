@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final de Fisiología - Antito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Examen de Fisiología</h1>
+            <p class="subtitle">Cardiovascular, Respiratorio y Renal</p>
+        </header>
+
+        <main id="quiz-container">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            
+            <div class="question-card">
+                <div class="question-header">
+                    <span id="question-number">Pregunta 1/40</span>
+                    <span id="category-badge">Fisiología Cardiovascular</span>
+                </div>
+                <h2 id="question-text">¿Cargando pregunta...?</h2>
+                
+                <button id="hint-btn" class="hint-toggle">
+                    <span class="icon">💡</span> Ver Pista
+                </button>
+                <div id="hint-text" class="hint-content hidden"></div>
+
+                <div id="options-container" class="options-grid">
+                    <!-- Options will be injected here -->
+                </div>
+
+                <div id="feedback-area" class="feedback hidden">
+                    <div id="feedback-icon"></div>
+                    <div id="feedback-message"></div>
+                    <div id="feedback-detail"></div>
+                    <button id="next-btn" class="next-button hidden">Siguiente Pregunta</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="final-score" class="hidden">
+            <h2>¡Felicidades Antito<3!</h2>
+            <p>Has completado el examen.</p>
+            <div class="score-display">
+                <span id="score-value">0</span> / 40
+            </div>
+            <button id="restart-btn" class="primary-btn">Intentar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
