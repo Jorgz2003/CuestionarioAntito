@@ -52,9 +52,21 @@ function loadQuestion() {
     const progress = ((currentQuestionIndex) / quizData.length) * 100;
     progressBar.style.width = `${progress}%`;
 
+    // Generic shuffle function
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Create a shallow copy and shuffle options
+    const shuffledOptions = shuffleArray([...question.options]);
+
     // Render Options
     optionsContainer.innerHTML = '';
-    question.options.forEach((option, index) => {
+    shuffledOptions.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.classList.add('option-btn');
         btn.textContent = option.text;
@@ -129,7 +141,7 @@ nextBtn.addEventListener('click', () => {
 function showFinalScore() {
     quizContainer.classList.add('hidden');
     finalScoreContainer.classList.remove('hidden');
-    scoreValueEl.textContent = score;
+    // Score display removed as per user request
 
     // Final progress bar update
     progressBar.style.width = '100%';

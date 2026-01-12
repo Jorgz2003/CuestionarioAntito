@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen Final de Fisiología - Antito</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         <header>
@@ -21,14 +25,14 @@
             <div id="progress-bar-container">
                 <div id="progress-bar"></div>
             </div>
-            
+
             <div class="question-card">
                 <div class="question-header">
                     <span id="question-number">Pregunta 1/40</span>
                     <span id="category-badge">Fisiología Cardiovascular</span>
                 </div>
                 <h2 id="question-text">¿Cargando pregunta...?</h2>
-                
+
                 <button id="hint-btn" class="hint-toggle">
                     <span class="icon">💡</span> Ver Pista
                 </button>
@@ -48,16 +52,19 @@
         </main>
 
         <div id="final-score" class="hidden">
-            <h2>¡Felicidades Antito<3!</h2>
-            <p>Has completado el examen.</p>
-            <div class="score-display">
-                <span id="score-value">0</span> / 40
-            </div>
-            <button id="restart-btn" class="primary-btn">Intentar de Nuevo</button>
+            <h2>¡Felicidades Antito<3!< /h2>
+                    <p>Has completado el examen.</p>
+                    <p class="final-message"
+                        style="font-size: 1.1em; color: var(--primary-color); margin: 20px 0; font-weight: 500;">
+                        Felicidades Antito, nunca olvides lo increible y capaz que eres, confia siempre en lo que
+                        sabes porque eres la numero 1, 🤟
+                    </p>
+                    <button id="restart-btn" class="primary-btn">Intentar de Nuevo</button>
         </div>
     </div>
 
     <script src="questions.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
