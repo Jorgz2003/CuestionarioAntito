@@ -52,21 +52,9 @@ function loadQuestion() {
     const progress = ((currentQuestionIndex) / quizData.length) * 100;
     progressBar.style.width = `${progress}%`;
 
-    // Generic shuffle function
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-
-    // Create a shallow copy and shuffle options
-    const shuffledOptions = shuffleArray([...question.options]);
-
     // Render Options
     optionsContainer.innerHTML = '';
-    shuffledOptions.forEach((option, index) => {
+    question.options.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.classList.add('option-btn');
         btn.textContent = option.text;
